@@ -63,8 +63,6 @@ class SignedApplicationRequest
             ->item(0)
             ->C14N();
 
-        file_put_contents(realpath(__DIR__ . '/../steps/application_request.signed.php.xml'), $result);
-
         return $result;
     }
 
