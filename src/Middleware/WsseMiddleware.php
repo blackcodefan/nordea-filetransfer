@@ -199,6 +199,8 @@ class WsseMiddleware extends \Phpro\SoapClient\Middleware\WsseMiddleware
 
         $request = $request->withBody($xml->toStream());
 
+        $xml->getXmlDocument()->save(realpath(__DIR__ . '/../../steps/application_request.formed.php.xml'));
+
         return $handler($request, $options);
     }
 
